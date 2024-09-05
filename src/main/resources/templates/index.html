@@ -7,9 +7,10 @@
     <title>Taming Thymeleaf</title>
 </head>
 <body>
+<h1 th:text="#{dashboard.title}"></h1>
 <h1 th:text="${pageTitle}"> Thymeleaf</h1>
 <div>
-    <ul>
+    <ul th:id="|container-${pageTitle}|">
         <li th:each="scientist : ${scientists}">
             <span th:text="${scientist}"></span>
         </li>
